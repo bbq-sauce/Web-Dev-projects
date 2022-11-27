@@ -20,8 +20,94 @@ body{
 
 }
 
+main,aside,footer{
+    transition: all 0.4s ease-out;
+  overflow: hidden;
+}
 main{
-    grid-area: 1/2/8/span 6;
-    background: url(one.jpg) no-repeat center/ 140%;
+    grid-area: 1/1/8/span 6;
+    background: url('one.jpg') no-repeat center/ 140%;
     transform: translateX(0);
 }
+
+
+main:hover{
+    
+    background: url('one.jpg') no-repeat center/ 100%;
+    transform: translateX(25px);
+}
+
+aside{
+    grid-area: 1/7/4/15;
+    background: url('two.jpg') no-repeat center/140%;
+    transform: translateY(0);
+}
+
+aside:hover{
+    
+    background: url('two.jpg') no-repeat center/115%;
+    transform: translateY(25px);
+}
+
+footer{
+    grid-area: 5/7/8/15;
+    background: url('images.jpg') no-repeat center/140%;
+    transform: translateY(0);
+}
+
+footer:hover{
+    
+    background: url('images.jpg') no-repeat center/115%;
+    transform: translateY(-25px);
+}
+
+div{
+    grid-area: 3/4/span 2/15;
+    background-color: rgba(255,255,255,0.5);
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 50px;
+    z-index: 50;
+}
+
+h1{
+    text-transform: uppercase;
+    color: black;
+    
+    font-size: 60px;
+    font-weight: 80;
+    clip-path: polygon(0 0,0 00 100%,0 100%);
+    animation: revealRight 4s ease-out 0.5s forwards;
+}
+
+@keyframes revealRight{
+    to{
+        clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+    }
+}
+
+
+svg {
+    margin: 5px 0 0 20px;
+    cursor: pointer;
+    /* (12)- Adding transform style */
+    transform: scale(1);
+    transform-origin: left center;
+    transition: all 0.2s ease-out;
+    /* (14)- Adding transform style */
+    opacity: 0;
+    animation: opacity 0.4s ease-out 3s forwards;
+}
+
+svg:hover {
+    transform: scale(1.9);
+}
+
+
+@keyframes opacity {
+    to {
+        opacity: 1;
+    }
+}
+
+
