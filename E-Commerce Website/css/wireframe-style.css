@@ -1,0 +1,12 @@
+.container,
+.container-fluid{
+    border: dashed 1px #9fa6b2;
+}
+
+.row{
+    border: dashed 1px #c6575f;
+}
+
+.row-div{
+    border: dashed 1px #49596f;
+}
